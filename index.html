@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学宝儿-微信步数修改</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<style>
+    .login-box {
+        border: 1px solid #DCDFE6;
+        width: 400px;
+        margin: 80px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        box-shadow: 0 0 25px #909399;
+        text-align: center;
+    }
+
+    .login-box img {
+        width: 130px;
+        height: 38px;
+        margin: 0 auto 10px auto;
+    }
+
+    .el-form-item {
+        margin-bottom: 20px !important;
+    }
+
+    .login-title {
+        text-align: center;
+        margin: 0 auto 20px auto;
+        color: #303133;
+    }
+
+    .video,
+    .tips {
+        font-size: 12px;
+    }
+</style>
+<style type="text/css">
+    body {
+        background-image: url("https://ae01.alicdn.com/kf/U774af10dc9954d0ea87878a9004f2e05U.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+</style>
+
+
+<body style="background-size: cover;">
+    <div id="app">
+        <template>
+            <div>
+                <el-form ref="loginForm" :model="form" class="login-box">
+                    <h3 class="login-title">学宝儿-微信步数修改</h3>
+                    </h3>
+                    <el-form-item>
+                        <el-input type="text" placeholder="请输入小米运动手机号" v-model="form.username" />
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input type="text" placeholder="请输入小米运动密码" v-model="form.password" />
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input type="text" placeholder="请输入最小步数" v-model="form.min" />
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input type="text" placeholder="请输入最大步数" v-model="form.max" />
+                    </el-form-item>
+                    <el-form-item>
+                        <div class="tips">随机取最小步数至最大步数之间的值，两者相等则为该步数，提交之后步数可能稍有延迟，大概等待2至3分钟即可</div>
+                        <el-button type="primary" style="width: 100%;" v-on:click="save('loginForm')">提交步数</el-button>
+                        </el-button>
+                    </el-form-item>
+                    <a class="video" target="_blank" href="https://www.bilibili.com/video/BV1ov411j7B3/">视频教程</a>
+                </el-form>
+            </div>
+        </template>
+    </div>
+</body>
+<script src="./static/yundong.js"></script>
+
+</html>
